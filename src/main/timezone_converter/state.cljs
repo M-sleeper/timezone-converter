@@ -14,13 +14,13 @@
   [{:keys [timezone-from timezone-to input-time]}]
   (cond
     (nil? input-time)
-    "Please select input time"
+    "Please select the input time"
 
     (not (timezone/validate-timezone timezone-from))
-    "Please select input timezone from the list"
+    "Please select an input timezone from the list"
 
     (not (timezone/validate-timezone timezone-to))
-    "Please select output timezone from the list"))
+    "Please select an output timezone from the list"))
 
 (def current-result
   (r/track
