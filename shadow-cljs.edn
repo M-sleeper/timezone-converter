@@ -1,0 +1,15 @@
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[reagent "1.2.0"]
+  [cider/cider-nrepl "0.47.0"]
+  [tick "0.7.5"]]
+
+ :dev-http {8080 "public"}
+ :builds
+ {:frontend
+  {:target :browser
+   :modules {:main {:init-fn timezone-converter.app/init}}}}}
