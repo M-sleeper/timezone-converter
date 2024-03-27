@@ -5,9 +5,8 @@
 
 (defn app []
   [:div
-   [view/time-input]
-   [view/timezone-input :timezone-from]
-   [view/timezone-input :timezone-to]
+   [:h2 "Timezone converter"]
+   [view/form]
    @state/current-result])
 
 (defn ^:dev/after-load init []
